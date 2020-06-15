@@ -12,6 +12,7 @@ const products = [
   }
 ];
 
+// SE AHCE PETICION GET A /products
 router.get("/", function(req, res) {
   res.render("products", { products });
 });
