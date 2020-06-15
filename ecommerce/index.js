@@ -6,6 +6,7 @@ const productsRouter = require('./routes/products');
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
+//  SE IMPLEMENTA EL ENPOINT/ RUTA EN /products QUE LA USE EXPRESS app.use 
 app.use("/products", productsRouter);
 
 const server = app.listen(8000, function() {
