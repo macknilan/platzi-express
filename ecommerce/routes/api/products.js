@@ -40,7 +40,7 @@ router.post("/", async function(req, res, next) {
 
   try {
     const product = await productService.createProduct({ product });
-
+    // IMPLEMENTACION DEL body-parser CON EL .json
     res.status(201).json({
       data: product,
       message: "products listed"
