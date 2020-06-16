@@ -4,6 +4,7 @@ const app = express();
 const productsRouter = require('./routes/products');
 
 // SE IMPORTA EL ARCHIVO DE TIENE LA LOGICA PARA HACER CRUD EN LA API
+// SE CREA LA CARPETA API DENTRO DE LA CARPETA ROUTES PARA HACER LA DISTINCIÓN DE LA API CON LAS DEMAS RUTAS
 const productsApiRouter = require('./routes/api/products');
 
 app.use("/static", express.static(path.join(__dirname, "public")));
