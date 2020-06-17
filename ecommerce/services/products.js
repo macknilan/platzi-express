@@ -8,10 +8,13 @@ class ProductsService {
   }
 
   async getProducts({ tags }) {
+    // SE ARMA EL QUERY EN FORMATO MONGO DB DE QUE SI LOS TAGS EXISTEN
     const query = tags && { tags: { $in: tags } };
+    // SE ENVIA EL QUERY A LA CLASE MongoLib QUE SE IMPORTA DEL ARCHIVO lib/mongo.js
     const products = await this.mongoDB.getAll(this.collection, query);
-
-    return products || [];
+    
+    // SI LOS PRODUCTOS NO EXISTEN DEVUELVE UN ARREGLO VACIO
+    return products || []; 
   }
 
   getProduct({ productId }) {
