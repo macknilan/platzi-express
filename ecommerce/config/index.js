@@ -1,6 +1,8 @@
+// ARCHIVO DE CONFIGURACION PARA TRAER LAS VARIABLES DE ENTORNO A LA APP
 require("dotenv").config();
 
 const config = {
+  // VARIABLE QUE INDICA SI ESTA EN PRODUCCION O DESARROLLO
   dev: process.env.NODE_ENV !== "production",
   port: process.env.PORT,
   dbUser: process.env.DB_USER,
